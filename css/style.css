@@ -2364,7 +2364,7 @@ body.lock {
   background: url("../img/legalization/border.svg");
   background-repeat: no-repeat;
   background-size: 62%;
-  background-position: bottom right;
+  background-position: 99% 100%;
 }
 .item-legalization__text-block span {
   position: relative;
