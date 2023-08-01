@@ -647,18 +647,24 @@ body.lock {
 }
 
 .contacts {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-size: 0;
-  flex-direction: column;
-  align-items: center;
   z-index: 10000;
+  cursor: pointer;
+}
+@media (max-width: 479.98px) {
+  .contacts {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .contacts__open {
   display: -webkit-box;
