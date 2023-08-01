@@ -245,10 +245,10 @@ body.lock {
 }
 @media (max-width: 479.98px) {
   .logo {
-    height: 32px;
-    font-size: 16px;
+    height: 30px;
+    font-size: 15px;
     border-radius: 10px;
-    padding: 5px 7.5px;
+    padding: 5px 6px;
   }
 }
 .logo_black {
@@ -656,14 +656,14 @@ body.lock {
   flex-direction: column;
   align-items: center;
   position: fixed;
-  bottom: 50px;
+  bottom: 40px;
   right: 50px;
   z-index: 10000;
   cursor: pointer;
 }
 @media (max-width: 479.98px) {
   .contacts {
-    bottom: 10px;
+    bottom: 0px;
     right: 10px;
   }
 }
@@ -673,6 +673,7 @@ body.lock {
   width: 40px;
   height: 40px;
   overflow: hidden;
+  margin: 0 0 10px 0;
   background-color: #fe993a;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -684,9 +685,6 @@ body.lock {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.contacts__open:not(:last-child) {
-  margin: 0 0 10px 0;
 }
 @media (min-width: 479.98px) {
   .contacts__open:hover {
@@ -732,6 +730,7 @@ body.lock {
   height: 146px;
   opacity: 1;
   visibility: visible;
+  margin: 0 0 10px 0;
 }
 @media (max-width: 479.98px) {
   .contacts__items.show {
@@ -839,7 +838,7 @@ body.lock {
 }
 @media (max-width: 479.98px) {
   .header__logo {
-    margin: 0 12px 0 0;
+    margin: 0 9px 0 0;
   }
 }
 .header__body {
@@ -987,9 +986,10 @@ body.lock {
 @media (max-width: 479.98px) {
   .phone-header {
     height: 32px;
-    font-size: 14px;
-    margin: 0 12px 0 0;
+    font-size: 13px;
+    margin: 0 9px 0 0;
     border-radius: 10px;
+    padding: 5px 8px 5px 8px;
   }
 }
 .phone-header__icon {
@@ -1026,8 +1026,8 @@ body.lock {
 }
 @media (max-width: 479.98px) {
   .phone-icon-header {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
   }
 }
 
