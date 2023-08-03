@@ -656,28 +656,26 @@ body.lock {
   flex-direction: column;
   align-items: center;
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   right: 50px;
   z-index: 10000;
   cursor: pointer;
 }
 @media (max-width: 479.98px) {
   .contacts {
-    bottom: 0px;
+    bottom: 10px;
     right: 10px;
   }
 }
 .contacts__open {
   display: none;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
-  margin: 0 0 10px 0;
+  margin: 10px 0 0px 0;
   background-color: #fe993a;
-  -webkit-box-shadow: 0px 0px 7px 5px rgba(254, 153, 58, 0.75);
-  -moz-box-shadow: 0px 0px 7px 5px rgba(254, 153, 58, 0.75);
-  box-shadow: 0px 0px 7px 5px rgba(254, 153, 58, 0.75);
+  animation: boxShadow 1s ease-out infinite alternate;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -699,14 +697,13 @@ body.lock {
 }
 .contacts__close {
   display: none;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
   background-color: #fe993a;
-  -webkit-box-shadow: 0px 0px 7px 5px rgba(254, 153, 58, 0.75);
-  -moz-box-shadow: 0px 0px 7px 5px rgba(254, 153, 58, 0.75);
-  box-shadow: 0px 0px 7px 5px rgba(254, 153, 58, 0.75);
+  margin: 15px 0 0px 0;
+  animation: boxShadow 1s ease-out infinite alternate;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -721,29 +718,26 @@ body.lock {
 .contacts__close img {
   max-width: 70%;
 }
-.contacts__close:not(:last-child) {
-  margin: 0 0 15px 0;
-}
 @media (min-width: 479.98px) {
   .contacts__close:hover {
     background-color: #fd912c;
   }
 }
 .contacts__items {
-  transition: all 0.7s, font-size 0s;
+  transition: all 0.4s, font-size 0s;
   height: 0;
   opacity: 0;
   visibility: hidden;
 }
 .contacts__items.show {
-  height: 161px;
+  transition: all 0.7s, font-size 0s;
+  height: 176px;
   opacity: 1;
   visibility: visible;
-  margin: 0 0 10px 0;
 }
 @media (max-width: 479.98px) {
   .contacts__items.show {
-    height: 215px;
+    height: 229px;
   }
 }
 .contacts__item:not(:last-child) {
@@ -775,8 +769,8 @@ body.lock {
   font-size: 0;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease 0s;
@@ -810,14 +804,14 @@ body.lock {
   position: absolute;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 15px;
   white-space: nowrap;
-  right: 50px;
+  right: 60px;
   background: url("../img/contacts/phone-black.svg") no-repeat;
   background-position: 10px center;
   background-size: 12%;
   background-color: #fff;
-  height: 40px;
+  height: 50px;
   border-radius: 10px;
   padding: 5px 20px 5px 40px;
   color: #404040;
@@ -828,6 +822,18 @@ body.lock {
   display: flex;
 }
 
+@keyframes boxShadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 21px 5px rgba(253, 145, 44, 0.95);
+    -moz-box-shadow: 0px 0px 21px 5px rgba(253, 145, 44, 0.95);
+    box-shadow: 0px 0px 21px 5px rgba(253, 145, 44, 0.95);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 21px 11px rgba(253, 145, 44, 0.95);
+    -moz-box-shadow: 0px 0px 21px 11px rgba(253, 145, 44, 0.95);
+    box-shadow: 0px 0px 21px 11px rgba(253, 145, 44, 0.95);
+  }
+}
 .ibg {
   background-position: center;
   background-size: cover;
