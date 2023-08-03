@@ -663,8 +663,8 @@ body.lock {
 }
 @media (max-width: 479.98px) {
   .contacts {
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
   }
 }
 .contacts__open {
