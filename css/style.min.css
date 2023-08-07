@@ -663,8 +663,8 @@ body.lock {
 }
 @media (max-width: 479.98px) {
   .contacts {
-    bottom: 15px;
-    right: 15px;
+    bottom: 25px;
+    right: 25px;
   }
 }
 .contacts__open {
@@ -674,13 +674,16 @@ body.lock {
   height: 50px;
   overflow: hidden;
   margin: 10px 0 0px 0;
-  background-color: #fe993a;
+  background-color: #f6851b;
   animation: boxShadow 1s ease-out infinite alternate;
+  animation: btnVibration 0.4s infinite, boxShadow 1s ease-out infinite alternate;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 1;
 }
 .contacts__open.active {
   display: flex;
@@ -690,18 +693,18 @@ body.lock {
 .contacts__open img {
   max-width: 65%;
 }
-@media (min-width: 479.98px) {
-  .contacts__open:hover {
-    background-color: #fd912c;
-  }
+.contacts__open:hover {
+  background-color: #fd912c;
+  animation: boxShadow 1s ease-out infinite alternate;
 }
 .contacts__close {
   display: none;
+  position: relative;
+  z-index: 1;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  overflow: hidden;
-  background-color: #fe993a;
+  background-color: #f6851b;
   margin: 15px 0 0px 0;
   animation: boxShadow 1s ease-out infinite alternate;
   -webkit-transition: all 0.3s ease 0s;
@@ -724,6 +727,8 @@ body.lock {
   }
 }
 .contacts__items {
+  position: relative;
+  z-index: 0;
   transition: all 0.4s, font-size 0s;
   height: 0;
   opacity: 0;
@@ -824,14 +829,31 @@ body.lock {
 
 @keyframes boxShadow {
   0% {
-    -webkit-box-shadow: 0px 0px 21px 5px rgba(253, 145, 44, 0.95);
-    -moz-box-shadow: 0px 0px 21px 5px rgba(253, 145, 44, 0.95);
-    box-shadow: 0px 0px 21px 5px rgba(253, 145, 44, 0.95);
+    -webkit-box-shadow: 0px 0px 21px 5px rgb(253, 145, 44);
+    -moz-box-shadow: 0px 0px 21px 5px rgb(253, 145, 44);
+    box-shadow: 0px 0px 21px 5px rgb(253, 145, 44);
   }
   100% {
-    -webkit-box-shadow: 0px 0px 21px 11px rgba(253, 145, 44, 0.95);
-    -moz-box-shadow: 0px 0px 21px 11px rgba(253, 145, 44, 0.95);
-    box-shadow: 0px 0px 21px 11px rgba(253, 145, 44, 0.95);
+    -webkit-box-shadow: 0px 0px 21px 8px rgb(253, 145, 44);
+    -moz-box-shadow: 0px 0px 21px 8px rgb(253, 145, 44);
+    box-shadow: 0px 0px 21px 8px rgb(253, 145, 44);
+  }
+}
+@keyframes btnVibration {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  50% {
+    transform: translateX(1px) rotate(1deg);
+  }
+  75% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 .ibg {
