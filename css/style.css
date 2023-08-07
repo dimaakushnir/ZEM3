@@ -454,7 +454,7 @@ body.lock {
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   visibility: hidden;
-  transition: visibility 0.8s ease 0s;
+  transition: transform 0.8s ease 0s;
   overflow-y: auto;
   z-index: 100;
 }
