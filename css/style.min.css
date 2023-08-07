@@ -454,7 +454,7 @@ body.lock {
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   visibility: hidden;
-  transition: transform 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
   overflow-y: auto;
   z-index: 100;
 }
@@ -477,7 +477,7 @@ body.lock {
   position: relative;
   transform: perspective(600px) translate(0, -100%) rotateX(45deg);
   opacity: 0;
-  transition: transform 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 @media (max-width: 361.98px) {
   .popup__content {
